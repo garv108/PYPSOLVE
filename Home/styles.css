@@ -1,35 +1,50 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #0d1117; /* Dark theme background */
-    color: #c9d1d9; /* Light text color */
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    line-height: 1.8;
+    background-color: #f8f9fa; /* Light, neutral background */
+    color: #333; /* Dark text for contrast */
     overflow-x: hidden;
 }
 
 /* Header */
 header {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: #fff;
+    background: linear-gradient(to bottom right, #84fab0, #8fd3f4); /* Soft pastel gradient */
+    color: #ffffff;
     text-align: center;
-    padding: 3rem 1rem;
-    text-shadow: 0 0 10px #00ffc3;
+    padding: 3rem 2rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 header h1 span {
-    color: #00ffc3; /* Neon green */
-    text-shadow: 0 0 15px #00ffc3, 0 0 30px #00ffc3;
+    color: #333; /* Darker accent for contrast */
+    background: #fff; /* White highlight */
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #f1f1f1;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #161b22; /* Darker background for navbar */
+    background-color: #ffffff; /* Clean white navbar */
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
@@ -42,89 +57,150 @@ header h1 span {
 }
 
 .navbar ul li a {
-    color: #00ffc3; /* Neon green */
+    color: #555; /* Subtle, modern color */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
     transition: all 0.3s ease;
 }
 
 .navbar ul li a:hover {
-    color: #ff007f; /* Neon pink */
-    text-shadow: 0 0 10px #ff007f;
+    color: #00a8cc; /* Vibrant highlight */
 }
 
 /* Courses Section */
 .courses {
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
+    background: #f4f8ff; /* Light blue pastel background */
     text-align: center;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .courses h2 {
-    color: #00ffc3; /* Neon green */
-    text-shadow: 0 0 15px #00ffc3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Dark text for focus */
+    margin-bottom: 2rem;
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .course-buttons button {
-    margin: 10px;
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
-    background: linear-gradient(45deg, #ff007f, #00ffc3);
+    color: #ffffff;
+    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Vibrant blue gradient */
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 0 10px #ff007f, 0 0 20px #00ffc3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 .course-buttons button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #ff007f, 0 0 30px #00ffc3;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Features Section */
 .features {
-    background-color: #161b22; /* Dark section background */
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
+    background: #ffffff; /* Clean white section */
     text-align: center;
+    color: #555;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .features h2 {
-    color: #ff007f; /* Neon pink */
-    text-shadow: 0 0 15px #ff007f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Darker heading */
+    margin-bottom: 2rem;
 }
 
 .features ul {
     list-style: none;
     padding: 0;
-    color: #c9d1d9;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 .features li {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 15px 0;
+    font-size: 1.1rem;
     font-weight: bold;
+    color: #555;
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Section */
 .contact {
-    background-color: #0d1117; /* Dark background */
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Light blue gradient */
     text-align: center;
+    color: #333;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact h2 {
-    color: #00ffc3; /* Neon green */
-    text-shadow: 0 0 15px #00ffc3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333; /* Darker heading */
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
 }
 
 /* Footer */
 .footer {
-    background-color: #161b22; /* Darker footer */
-    color: #c9d1d9;
+    background-color: #f8f9fa; /* Light footer */
+    color: #555;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    border-top: 1px solid #ddd;
     margin-top: 2rem;
-    border-top: 1px solid #c9d1d9;
+}
+
+.footer p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .semester-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .column button {
+        margin-top: 0 !important;
+    }
 }
