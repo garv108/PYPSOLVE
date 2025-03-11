@@ -92,7 +92,7 @@ button {
     margin-top: 20px;
     font-size: 1rem;
     color: #000000;
-    background-color: #95a5a6;
+    background-color: #f4feff;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -107,28 +107,31 @@ button:hover {
 }
 
 /* Semesters Section */
+
 #semesters {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 70px 20px; /* Increased padding for consistency */
-    background-color: #34495e;
+    padding: 40px 20px;
+    gap: 30px;
+    background-color: #0015ff;
     text-align: center;
     color: #ffffff;
 }
 
 #semesters h2 {
     font-size: 4.5rem;
-    margin-bottom: 10px; /* Reduced spacing */
+    margin-top: 70px;
+    margin-bottom: 5px; /* Reduced spacing */
     color: #ffffff;
 }
 
 .semester-buttons-container {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin-top: 45px;
 }
 
 /* Semester Buttons Grid */
@@ -148,7 +151,7 @@ button:hover {
 .semester-buttons button {
     padding: 15px 25px;
     font-size: 1.5rem; /* Adjusted for readability */
-    background-color: #2980b9;
+    background-color: #0099ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -157,7 +160,7 @@ button:hover {
 }
 
 .semester-buttons button:hover {
-    background-color: #1f618d;
+    background-color: #2420ff;
     transform: scale(1.05); /* Slight scaling on hover */
 }
 
@@ -173,7 +176,7 @@ button:hover {
 
 #semester3 h2 {
     text-align: center;
-    color: #333;
+    color: #2d2d2d;
     margin-bottom: 30px; /* Consistent spacing */
 }
 
@@ -379,8 +382,8 @@ button:hover {
 
 /* Basic styles for the accordion */
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #dfdcdc;
+    color: #1f1e1e;
     cursor: pointer;
     padding: 10px;
     width: 100%;
