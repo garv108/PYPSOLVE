@@ -1,4 +1,5 @@
-/* General Styles */* {
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,11 +58,11 @@ body {
 
 #intro {
     height: 100vh; /* Full-screen height */
-    background: linear-gradient(135deg, #ffe100b4, #2c79ffe7); /* Gradient background */
+    background: linear-gradient(135deg, #ffe100, #005effe7); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 50px 20px; /* Consistent padding */
 }
@@ -72,13 +73,13 @@ body {
 }
 
 #intro h1 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     margin-bottom:10px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
 }
 
 #intro p {
-    font-size: 1.2rem;
+    font-size: clamp(1.0 rem, 5vw, 3rem);
     margin-top: 20px;
     margin-bottom: 50px;
     line-height: 1.6;
@@ -106,7 +107,6 @@ button:hover {
 }
 
 /* Semesters Section */
-
 #semesters {
     min-height: 100vh;
     display: flex;
@@ -115,27 +115,36 @@ button:hover {
     align-items: center;
     padding: 40px 20px;
     gap: 30px;
-    background-color: #080e53;
+    background: linear-gradient(135deg, #000000, #68a0ffe7); /* Gradient background */
     text-align: center;
-    color: #ffffff;
+    color: #383636;
 }
 
 #semesters h2 {
-    font-size: 4.5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     margin-bottom: 10px;
+    margin-top: 5%;
     color: #ffffff;
 }
 
 .semester-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
-    margin-top: 45px;
+    margin: 0 auto; /* Horizontal centering */
+    text-align: center;
 }
 
 .semester-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 600px;
+    margin-top: 30px;
 }
 
 .column {
@@ -144,14 +153,19 @@ button:hover {
 }
 
 .semester-buttons button {
-    padding: 15px 25px;
+    padding: 10px 20px;
     font-size: 1.5rem;
-    background-color: #2575fc;
+    width: 180px;
+    border-radius: 10px;
+    background-color: black;
     color: white;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
+    transition: all 0.3s ease;
+}
+
+.semester-buttons button:hover {
+    background-color: #222;
 }
 
 /* Only apply top margin to buttons except the first one in each column */
@@ -160,100 +174,8 @@ button:hover {
 }
 
 .semester-buttons button:hover {
-    background-color: #231bc3;
+    background-color: #00aecd;
     transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .semester-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .column {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .column button {
-        margin-top: 0 !important;
-    }
-}
-
-
-/* Semester 1 Section */
-#semester1 {
-    margin: 50px auto; /* Consistent spacing around the section */
-    padding: 40px;
-    max-width: 800px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
-}
-
-#semester1 h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px; /* Consistent spacing */
-}
-
-#semester1 ul {
-    list-style: none;
-    padding: 0;
-}
-
-#semester1 li {
-    margin: 15px 0; /* Consistent spacing between items */
-}
-
-#semester1 li a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#semester1 li a:hover {
-    color: #0056b3;
-}
-
-/* Semester 2 Section */
-#semester2 {
-    margin: 50px auto; /* Consistent spacing around the section */
-    padding: 40px;
-    max-width: 800px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
-}
-
-#semester2 h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px; /* Consistent spacing */
-}
-
-#semester2 ul {
-    list-style: none;
-    padding: 0;
-}
-
-#semester2 li {
-    margin: 15px 0; /* Consistent spacing between items */
-}
-
-#semester2 li a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#semester2 li a:hover {
-    color: #0056b3;
 }
 
 /* Semester 3 Section */

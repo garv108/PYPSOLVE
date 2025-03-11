@@ -73,13 +73,13 @@ body {
 }
 
 #intro h1 {
-    font-size: 3rem;
-    margin-bottom:10px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: 10px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
 }
 
 #intro p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 5vw, 3rem);
     margin-top: 20px;
     margin-bottom: 50px;
     line-height: 1.6;
@@ -91,8 +91,8 @@ button {
     position: relative;
     margin-top: 20px;
     font-size: 1rem;
-    color: #000000;
-    background-color: rgb(234, 248, 255);
+    color: #2575fc;
+    background-color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -111,55 +111,73 @@ button:hover {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 70px 20px; /* Increased padding for consistency */
-    background-color: #2433d4;
+    padding: 40px 20px;
+    gap: 30px;
+    background: linear-gradient(135deg, #000000, #68a0ffe7); /* Gradient background */
     text-align: center;
-    color: #ffffff;
+    color: #383636;
 }
 
 #semesters h2 {
-    font-size: 4.5rem;
-    margin-bottom: 10px; /* Reduced spacing */
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 10px;
+    margin-top: 5%;
     color: #ffffff;
 }
 
 .semester-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
-    margin-top: 45px;
+    margin: 0 auto; /* Horizontal centering */
+    text-align: center;
 }
 
-/* Semester Buttons Grid */
 .semester-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Space between columns */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 600px;
+    margin-top: 30px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Consistent spacing between buttons */
 }
 
-/* Button Styles */
 .semester-buttons button {
-    padding: 15px 25px;
-    font-size: 1.5rem; /* Adjusted for readability */
-    background-color: #2575fc;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    width: 180px;
+    border-radius: 10px;
+    background-color: black;
     color: white;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .semester-buttons button:hover {
-    background-color: #231bc3;
-    transform: scale(1.05); /* Slight scaling on hover */
+    background-color: #222;
 }
+
+/* Only apply top margin to buttons except the first one in each column */
+.column button:not(:first-child) {
+    margin-top: 30px;
+}
+
+.semester-buttons button:hover {
+    background-color: #00aecd;
+    transform: scale(1.05);
+}
+
 /* Semester 3 Section */
 #semester3 {
     margin: 50px auto; /* Consistent spacing around the section */
