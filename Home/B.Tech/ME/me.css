@@ -161,7 +161,28 @@ button:hover {
     color: white;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 👇 Add this below - Responsive Styles */
+@media (max-width: 768px) {
+    .semester-buttons button {
+        width: 140px;
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .semester-buttons {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .semester-buttons button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
 }
 
 .semester-buttons button:hover {

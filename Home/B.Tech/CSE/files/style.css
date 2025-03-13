@@ -85,6 +85,55 @@ body {
     line-height: 1.6;
 }
 
+.semester-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between buttons */
+}
+
+.semester-buttons button {
+    flex: 1 1 calc(50% - 20px); /* Two columns with space between */
+    padding: 15px 25px;
+    font-size: 1.5rem; /* Adjusted for readability */
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#intro {
+    height: 100vh; /* Full-screen height */
+    background: linear-gradient(135deg, #ffe100, #005effe7); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px 20px; /* Consistent padding */
+}
+
+#intro .content {
+    max-width: 600px; /* Limit the content width */
+    margin-top: -20px;
+}
+
+#intro h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom:10px;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+#intro p {
+    font-size: clamp(1.0 rem, 5vw, 3rem);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
 /* Button Styles */
 button {
     padding: 15px 30px;
@@ -161,7 +210,28 @@ button:hover {
     color: white;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 👇 Add this below - Responsive Styles */
+@media (max-width: 768px) {
+    .semester-buttons button {
+        width: 140px;
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .semester-buttons {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .semester-buttons button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
 }
 
 .semester-buttons button:hover {

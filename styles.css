@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to bottom right, #84fab0, #8fd3f4); /* Soft pastel gradient */
+    background: linear-gradient(to bottom right,#00aaff, #00ff5e); /* Soft pastel gradient */
     color: #ffffff;
     text-align: center;
     padding: 3rem 2rem;
