@@ -128,7 +128,7 @@ body {
 }
 
 #intro p {
-    font-size: clamp(1.0 rem, 5vw, 3rem);
+    font-size: clamp(1rem, 2vw, 3rem);
     margin-top: 20px;
     margin-bottom: 50px;
     line-height: 1.6;
